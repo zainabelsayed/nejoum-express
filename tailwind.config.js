@@ -45,6 +45,7 @@ const config = {
         beige: '#fff7f7',
         primary: {
           500: '#ff574d',
+          600: '#ef4b22',
         },
       },
       flex: {

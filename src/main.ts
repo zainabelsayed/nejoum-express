@@ -36,7 +36,7 @@ import Profile from '@/views/Profile.vue'
 
 const routes = [
   {
-    path: '/admin',
+    path: '/',
     redirect: '/admin/dashboard',
     component: Admin,
     children: [

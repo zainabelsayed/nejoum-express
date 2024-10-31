@@ -51,12 +51,14 @@
               </div>
 
               <div class="text-center">
-                <button
-                  class="bg-primary-500 text-white active:bg-blueGray-600 text-lg font-bold px-6 py-5 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                  type="button"
-                >
-                  Login
-                </button>
+                <RouterLink to="/">
+                  <button
+                    class="bg-primary-500 hover:bg-primary-600 text-white active:bg-blueGray-600 text-lg font-bold px-6 py-5 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                    type="button"
+                  >
+                    Login
+                  </button>
+                </RouterLink>
               </div>
             </form>
           </div>
