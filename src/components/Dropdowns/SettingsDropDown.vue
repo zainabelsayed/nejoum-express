@@ -1,22 +1,16 @@
 <template>
   <div>
     <a
-      class="text-blueGray-500 block"
+      class="text-blueGray-500 py-2 px-3 text-md border bg-gray-100 hover:bg-gray-200 rounded block w-fit whitespace-nowrap"
       href="#pablo"
       ref="btnDropdownRef"
       v-on:click="toggleDropdown($event)"
     >
-      <div class="items-center flex">
-        <span
-          class="w-9 h-9 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
-        >
-          <img
-            alt="..."
-            class="w-full rounded-full align-middle border-none shadow-lg"
-            :src="image"
-          />
-        </span>
-      </div>
+      <i class="fas fa-cog me-2 text-lg text-gray-600"></i> Settings
+      <i
+        class="fas fa-chevron-down text-xs ms-2 transform transition-all duration-150 ease-in-out"
+        :class="dropdownPopoverShow ? 'rotate-180' : 'rotate-0'"
+      ></i>
     </a>
     <div
       ref="popoverDropdownRef"
@@ -32,30 +26,27 @@
         v-for="listItem in listItems"
         :key="listItem.label"
       >
-        <i :class="'me-2 text-lg text-gray-600 fas ' + listItem.icon"></i>
+        <i :class="listItem.icon + ' me-2 text-lg text-gray-600'"></i>
         {{ listItem.label }}
       </a>
     </div>
   </div>
 </template>
-
 <script lang="ts">
 import { createPopper } from '@popperjs/core'
 
-import image from '@/assets/img/user-avatar.png'
-
 const listItems = [
-  { label: 'Change Password', icon: 'fa-key' },
-  { label: 'Arabic', icon: 'fa-language' },
-  { label: 'Switch whorehouse', icon: 'fa-refresh' },
-  { label: 'Log out', icon: 'fa-sign-out-alt' },
+  { label: 'Exporting Carriers', icon: 'fas fa-ship' },
+  { label: 'Ports', icon: 'fas fa-anchor' },
+  { label: 'Consignees', icon: 'fas fa-store' },
+  { label: 'User Settings', icon: 'fas fa-user-cog' },
+  { label: 'User Roles', icon: 'fas fa-user-lock' },
 ]
 
 export default {
   data() {
     return {
       dropdownPopoverShow: false,
-      image: image,
       listItems,
     }
   },

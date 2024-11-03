@@ -1,18 +1,18 @@
 <template>
   <div
-    class="container mx-auto px-4 lg:px-12 flex flex-col justify-center w-full items-center lg:items-end"
+    class="container mx-auto px-4 lg:px-12 flex flex-col justify-center w-full items-center md:items-end md:px-0"
   >
     <div
-      class="flex content-center w-full items-center justify-end h-full lg:w-6/12"
+      class="flex content-center w-full items-center justify-end h-full lg:w-6/12 md:w-6/12 md:px-4"
     >
       <div
-        class="w-full flex justify-items-center mx-auto md:max-w-128 align-items-center lg:px-4"
+        class="w-full flex justify-items-center mx-auto sm:max-w-128 align-items-center lg:px-4"
       >
         <div
-          class="relative w-full justify-center items-center flex flex-col break-words max-w-128 mb-6 shadow-lg bg-white border-0 pt-8"
+          class="relative w-full justify-center items-center flex flex-col break-words max-w-128 mb-6 shadow-outline bg-white border-0"
         >
           <div
-            class="flex flex-col justify-center items-center mx-auto gap-6 p-8 lg:p-12 py-10 w-full"
+            class="flex flex-col justify-center items-center mx-auto gap-4 p-8 lg:p-12 py-10 w-full"
           >
             <div class="flex flex-col justify-center items-center gap-3">
               <div class="w-8 h-8">
@@ -39,7 +39,7 @@
                 ></i>
               </div>
 
-              <div class="relative w-full mb-3">
+              <div class="relative w-full">
                 <input
                   type="password"
                   class="border-0 px-4 py-5 text-gray-600 bg-white rounded text-sm shadow-outline focus:outline-none focus:ring w-full ease-linear transition-all duration-150 placeholder:text-lg placeholder:text-gray-500"
@@ -51,7 +51,7 @@
               </div>
 
               <div class="text-center">
-                <RouterLink to="/">
+                <RouterLink to="/select-branch">
                   <button
                     class="bg-primary-500 hover:bg-primary-600 text-white active:bg-blueGray-600 text-lg font-bold px-6 py-5 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                     type="button"

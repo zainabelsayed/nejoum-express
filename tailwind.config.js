@@ -43,9 +43,20 @@ const config = {
       colors: {
         gray: colors.slate,
         beige: '#fff7f7',
+        wheat: '#f6f6f6',
         primary: {
           500: '#ff574d',
           600: '#ef4b22',
+        },
+        dark: '#32404e',
+        navActive: '#475360',
+        textDark: '#adb3b8',
+        secondary: {
+          500: '#136ba5',
+          600: '#1470ad',
+        },
+        borders: {
+          500: '#35baf6',
         },
       },
       flex: {

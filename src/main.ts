@@ -21,6 +21,7 @@ import Dashboard from '@/views/admin/Dashboard.vue'
 import Settings from '@/views/admin/Settings.vue'
 import Tables from '@/views/admin/Tables.vue'
 import Maps from '@/views/admin/Maps.vue'
+import SelectBranch from '@/views/select-branch/SelectBranch.vue'
 
 // views for Auth layout
 
@@ -36,7 +37,7 @@ import Profile from '@/views/Profile.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/admin',
     redirect: '/admin/dashboard',
     component: Admin,
     children: [
@@ -57,6 +58,10 @@ const routes = [
         component: Maps,
       },
     ],
+  },
+  {
+    path: '/select-branch',
+    component: SelectBranch,
   },
   {
     path: '/auth',
